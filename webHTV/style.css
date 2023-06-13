@@ -1,0 +1,26 @@
+.navbar {
+    background-color: rgba(82, 64, 120, 1) !important;
+}
+
+.navbar li a{
+    color: white !important;
+}
+
+.navbar li a:hover{
+    color: rgb(255, 255, 153) !important;
+}
+
+.navbar li a i:hover{
+    color: rgb(240, 240, 168) !important;
+}
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color:purple;
+    border: solid 1px #c3c3c3;
+  }
+  
+  #panel {
+    padding: 30px;
+    display: none;
+  }

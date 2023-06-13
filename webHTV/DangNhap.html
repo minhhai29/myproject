@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+         h1 {
+                text-align:start;
+                text-transform: uppercase;
+                text-shadow: 2px 3px rgb(228, 71, 71);
+
+                }
+        h2{
+            font-weight: 200;
+            border-style: ridge;
+            background-color: rgb(170, 170, 170);
+        }
+        body{
+            background-image: url(8dd.jpg);
+            height: 500px;
+        }
+        label{
+            background-color: lightgrey;
+            width: 50px;
+            border: 2px solid black;
+            padding: 2px;
+            margin: 2px;
+            border-radius: 10px;
+            }
+        
+        input[type=text], select {
+                width: 400px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-sizing: border-box;
+                border: 3px solid black;
+                transition: width: 0.4s ease-in-out;
+        }
+        
+        input[type=text]:focus{
+            width: 70%;
+        }
+        input[type=password], select {
+                width: 400px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-sizing: border-box;
+                border: 3px solid black;
+                transition: width: 0.4s ease-in-out;
+        }
+        
+        input[type=password]:focus{
+            width: 70%;
+        }
+        div {
+                border-radius: 5px;
+                background-color: white;
+                padding: 20px;
+                width:  950px;
+                border: 3px solid #73AD21;
+            }
+                div.thuoctinh {
+                width: 80px;
+                height: 10px;
+                background-color: lightgrey;
+                border-radius: 10px;
+                border: 2px solid black;
+                text-align: none;
+            }
+    </style>
+    <body>
+        <h1 style="color: white;">Đăng nhập</h1>
+        
+        <div>
+            <form action="/action_page.php">
+                <label for="fname">Tên người dùng</label><br>
+                <input type="text" id="fname" name="tennguoidung" >
+
+                <br>
+
+                <label for="pass">Mật khẩu</label><br>
+                <input type="password" id="pass" name="pass">
+
+                <br>
+
+                <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Nhớ tài khoản
+                </label><br><br>
+                
+                              
+                <div class="thuoctinh"><a href="home-user.html">Đăng nhập</a></div>
+                <h3>Bạn chưa có tài khoản?</h3>
+
+                <a href="DangKi.html">Đăng kí tại đây</a>
+            </form>                
+            <img src="guitar_ud6bx9ez.gif" style="height: 330px;width: 250px;position:absolute;right: 410px;top: 85px;" >
+        </div>
+    </body>
+    
+</head>
+</html>

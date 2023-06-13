@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        h1 {
+            text-align: start;
+            text-transform: uppercase;
+            text-shadow: 2px 3px rgb(228, 71, 71);
+        }
+
+        h2 {
+            font-weight: 200;
+            border-style: ridge;
+            background-color: rgb(170, 170, 170);
+        }
+
+        body {
+            background-image: url(8dd.jpg);
+        }
+
+        label {
+            background-color: lightgrey;
+            width: 50px;
+            border: 2px solid green;
+            padding: 2px;
+            margin: 2px;
+            border-radius: 10px;
+        }
+
+        input[type=text], select {
+            width: 400px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: width: 0.6s ease-in-out;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            margin: auto;
+            margin-left: 80%;
+            font-size: large;
+            border: 3px solid green;
+            padding: 10px;
+            width: 20%;
+        }
+
+        input[type=text]:focus {
+            width: 100%;
+        }
+
+        input[type=password], select {
+            width: 400px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+            input[type=password]:focus {
+                width: 45%;
+            }
+
+        input[type=date], select {
+            width: 400px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+            input[type=date]:focus {
+                width: 45%;
+            }
+
+        div {
+            border-radius: 5px;
+            padding: 20px;
+            width: 950px;
+        }
+
+            div.absolute {
+                position: absolute;
+                top: 400px;
+                right: 660px;
+                width: 200px;
+                height: 100px;
+            }
+    </style>
+    <body>
+        <h1 style="color: white;">Form đăng kí cho người mới lập</h1>
+        <div style="background-image:url(nentn.jpg);">
+            <form action="/action_page.php">
+                <label for="fname">Họ và tên lót</label><br>
+                <input type="text" id="fname" name="firstname" placeholder="Ví dụ:Nguyễn Văn">
+                <br>
+                <label for="lname">Tên</label><br>
+                <input type="text" id="lname" name="lastname" placeholder="Ví dụ: A">
+                <br>
+                <label for="user">Tên người dùng</label><br>
+                <input type="text" id="user" name="user" placeholder="Không kèm kí tự đặc biệt và dấu cách">
+                <br><br>
+                <label for="pass">Mật khẩu</label><br>
+                <input type="password" id="pass" name="pass" style="transition: width: 0.6s ease-in-out;">
+                <br><br>
+                <label for="pass">Nhập lại mật khẩu</label><br>
+                <input type="password" id="pass" name="pass">
+                <br><br>
+                <label for="sex">Giới tính</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Nam</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Nữ</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Khác</label>
+                <br><br>
+                <label for="date">Ngày sinh</label><br>
+                <input type="date" id="birth" name="birthday">
+                <br>
+                <label for="country">Địa chỉ</label><br>
+                <select id="country" name="country">
+                    <option value="australia">Hà Nội</option>
+                    <option value="canada">TP.Hồ Chí Minh</option>
+                    <option value="usa">Đà Nẵng</option>
+                </select><br><br>
+                <label for="mail">Gmail(nếu có)</label>
+                <input type="email" id="mail" name="email" placeholder="@gmail.com">
+
+                <br><br>
+                <input type="submit" value="Đăng kí" formtarget="_blank">
+
+            </form>
+
+        </div>
+        <div class="absolute">
+            <img src="dangki.gif">
+        </div>
+    </body>
+
+</head>
+</html>

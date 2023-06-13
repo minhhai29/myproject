@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Tính năng băng chuyền -->  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Thanh tìm kiếm -->
+
+     
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"><!--Tính năng băng chuyền -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--Tính năng băng chuyền -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> <!--Tính năng băng chuyền -->    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><!--Tính năng băng chuyền -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <style>
+            * {
+                box-sizing: border-box;
+                }
+            body{
+                background-color:white;
+            }
+            .header{
+                background-image: url(logo2.jpg);
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+                padding: 100px;
+
+            }
+            .img1{
+                margin-left: 0px;
+                margin-right: auto;
+                margin-top: auto;
+                
+            }
+            .img2{
+                display:block;
+                margin-left: 80px;
+                margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .text div{
+                height: 500px;
+                width: 100px;
+                float: left;
+                background-color: red;
+            }
+            .footer {
+                background-color: black;
+                padding: 10px;
+                text-align: left;
+                }
+            
+            
+            li{
+                float: left;
+            }
+            li a, .dropbtn {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                }
+             
+
+            li.dropdown {
+                display: inline-block;
+                }
+
+            .dropdown-content a:hover {background-color: orange}
+
+
+            form.example input[type=text] {
+                padding: 10px;
+                font-size: 17px;
+                border: 1px solid grey;
+                float: left;
+                width: 80%;
+                background: #f1f1f1;
+                }/*phần nhập tìm kiếm*/
+
+            form.example button {
+                float: left;
+                width: 20%;
+                padding: 10px;
+                background: #2196F3;
+                color: white;
+                font-size: 17px;
+                border: 1px solid grey;
+                border-left:none;
+                cursor: pointer;
+                }/*phần submit find*/
+            
+
+            div.thuoctinh{
+                position: absolute;
+                top: 630px;
+                right: 100px;
+                width: 700px;
+                height: 497px;
+                background-color: white;
+                } /*ô mô tả sản phẩm*/
+            div.gallery { 
+                margin: 5px;
+                float: left;
+                width: 180px;
+                } /*danh mục sản phẩm*/
+
+            div.gallery img {
+                width: 100%;
+                height: auto;
+                }
+            .buttons_added {
+                opacity:1;
+                display:inline-block;
+                display:-ms-inline-flexbox;
+                display:inline-flex;
+                white-space:nowrap;
+                vertical-align:top;
+                
+            }
+            .is-form {
+                overflow:hidden;
+                position:relative;
+                background-color:#f9f9f9;
+                height:2.2rem;
+                width:1.9rem;
+                padding:0;
+                text-shadow:1px 1px 1px #fff;
+                border:1px solid #ddd;
+            }
+            .is-form:focus,.input-text:focus {
+                outline:none;
+            }
+            .is-form.minus {
+                border-radius:4px 0 0 4px;
+            }
+            .is-form.plus {
+                border-radius:0 4px 4px 0;
+            }
+            .input-qty {
+                height: 2.2rem;
+                text-align: center;
+                font-size: 1rem;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0px;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+                padding: 0px;
+            }
+            .input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+                -webkit-appearance:none;
+                margin:0;
+            }
+            #myImg {
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                }
+
+            #myImg:hover {opacity: 0.7;}/* thời gian zoom*/
+            .modal {
+                display: none; /* Ẩn theo mặc định */
+                position: fixed; /* Ở lại */
+                z-index: 1; /* ưu tiên */
+                padding-top: 100px; /*Vị trí của box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                background-color: rgb(0,0,0);
+                }
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                }
+
+                /* Caption of Modal Image */
+                #caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+                }
+
+                /* Add Animation */
+                .modal-content, #caption {  
+                -webkit-animation-name: zoom;
+                -webkit-animation-duration: 0.6s;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+                }
+
+                @-webkit-keyframes zoom {
+                from {-webkit-transform:scale(0)} 
+                to {-webkit-transform:scale(1)}
+                }
+
+                @keyframes zoom {
+                from {transform:scale(0)} 
+                to {transform:scale(1)}
+                }
+
+                /* The Close Button */
+                .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+                }
+
+                /* 100% Image Width on Smaller Screens */
+                @media only screen and (max-width: 700px){
+                .modal-content {
+                    width: 100%;
+                }
+                }
+                p.inset {border-style: inset;} /* đường viền */               
+</style>
+    </head>
+    <body>
+        <div class="header">
+            <li class="img1">
+                <a href="Home.html"><img src="avtar.jpg"></a>
+            </li>
+            <h1 style="color: red;text-shadow: 2px 2px black;font-size: 60px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Shop nhạc cụ HTV</h1>
+            
+          </div>
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="home-user.html">Trang chủ  </a>
+            <a class="navbar-brand" href="#">Bài viết</a>
+            <a class="navbar-brand" href="#">Đánh giá</a>
+            <a class="navbar-brand" href="#">Khuyến mãi</a>
+            <a class="navbar-brand" href="DangKi.html">Đăng kí</a>
+            <form class="form-inline" action="/action_page.php" style="margin-left:40px" >
+                <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm ở đây" style="width: 200px;">
+                <button class="btn btn-success" type="submit" style="background-color: blue;width: 80px;"><i class="fa fa-search"></i></button>
+              </form>
+              
+              
+              <button type="button"  data-toggle="modal" data-target="#modelId" style="background-color:black;width: 50px;margin-left: 40px;">
+                      <i class='fas fa-user-tie' style='font-size:22px;color: white;'></i>
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                              <div class="modal-header">
+                                      <h5 class="modal-title">Tùy chọn tài khoản</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                  </div>
+                          <div class="modal-body">
+                              <div class="container-fluid">
+                                  Bạn muốn đăng xuất ?
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                              <a href="Home.html"><button type="button" class="btn btn-primary" >Đăng xuất</button></a>
+                              <a href="DangKi.html"><button type="button" class="btn btn-primary" >Đăng nhập bằng tài khoản khác</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <script>
+                  $('#exampleModal').on('show.bs.modal', event => {
+                      var button = $(event.relatedTarget);
+                      var modal = $(this);
+                      // Use above variables to manipulate the DOM
+                      
+                  });
+              </script>
+             
+              
+          </nav>
+        <div class="container">
+            <div class="gallery">
+                <a target="_blank" href="guitar1.html"><img src="2.jpg" class="rounded-circle" alt="Cinque Terre" width="304" height="236">
+                <div>Đàn Guitar</div></a> 
+            </div>   
+            <div class="gallery" >
+            <a target="_blank" href="guitar1.html">
+                <img src="meme1.jpg" alt="Forest" width="600" height="400" class="rounded-circle" width="304" height="236">
+            
+            <div>Piano</div> </a>
+            </div>
+            
+            <div class="gallery" >
+            <a target="_blank" href="guitar1.html">
+                <img src="4.jpg" alt="Northern Lights" width="600" height="400"  class="rounded-circle" width="304" height="236">
+            
+            <div>Sáo,Tiêu</div></a>
+            </div>
+            
+            <div class="gallery" >
+            <a target="_blank" href="guitar1.html">
+                <img src="trống.jpg" alt="Mountains" width="600" height="400"  class="rounded-circle" width="304" height="236">
+            
+            <div>Trống</div></a>
+            </div>
+            <div class="gallery" >
+                <a target="_blank" href="guitar1.html">
+                    <img src="violin.jpg" alt="Mountains" width="600" height="400"  class="rounded-circle" width="304" height="236">
+                
+                <div>Violin</div></a>
+            </div>
+            <div class="gallery" >
+                <a target="_blank" href="guitar1.html">
+                    <img src="tdc.jpg" alt="Mountains" width="600" height="400"  class="rounded-circle" width="304" height="236">
+                
+                <div>Trống Điện tử</div></a>
+            </div>
+            <div class="gallery" >
+                <a target="_blank" href="guitar1.html">
+                    <img src="og.jpg" alt="Mountains" width="600" height="400"  class="rounded-circle" width="304" height="236">
+               
+                <div>Organ</div> </a>
+            </div>
+            <div class="gallery" >
+                <a target="_blank" href="guitar1.html">
+                    <img src="cj.jpg" alt="Mountains" width="600" height="400"  class="rounded-circle" width="304" height="236">
+                
+                <div >Trống Cajon</div></a>
+            </div>
+            <div class="gallery" >
+                <a target="_blank" href="guitar1.html">
+                    <img src="8d.webp" alt="Mountains" width="600" height="400"  class="rounded-circle" width="304" height="236">
+                
+                <div>Phụ kiện</div></a>
+            </div>
+            
+        </div>
+
+        </div>
+            <div class="img2">
+                
+                <img id="myImg" src="2.jpg" alt="ĐÀN GUITAR ACOUSTIC TAKAMINE ED2DCNAT" style="height: 500px;width: 600px;max-width:1000px">
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+                </div>
+
+                <script >
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img = document.getElementById("myImg");
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+                }
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                modal.style.display = "none";
+                }
+                </script>
+            </div>
+            
+        </div>
+        
+        
+        <div class="thuoctinh">
+            <p class="inset">
+            <h2>Mô tả sản phẩm:</h2>
+            <h5 style="margin-left:5px"> Guitar Takamine D Series là dòng sản phẩm do hãng guitar Takamine Nhật Bản đặc biệt phát triển riêng cho khách hàng thuộc khu vực các nước Châu Á và Châu Đại Dương. Mẫu thiết kế và quy trình sản xuất được kiểm soát nghiêm ngặt để tạo ra những guitar Takamine chất lượng tốt. Takamine D Series xứng đáng được đánh giá là dòng sản phẩm bán chạy với chất lượng tốt và giá cả hợp lý. Có rất nhiều lựa chọn cho khách hàng về kiểu dáng, màu sắc và chủng loại đa dạng.</h5>
+                
+                <h5 style="margin-left:10px">Mặt trước: Gỗ vân sam</h5>
+                <h5 style="margin-left:10px">Mặt sau: Gỗ gụ</h5>
+                <h5 style="margin-left:10px">Mặt bên: Gỗ gụ</h5>
+                <h5 style="margin-left:10px">Cần đàn: Gỗ gụ</h5>
+                <h4 style="margin-left:40px;color: red;">Giá: xxx VNĐ</h4>
+                <h5>Số lượng:  <input style="cursor: pointer;" class="minus is-form" type="button" value="-">
+                    <input aria-label="quantity" class="input-qty" max="20" min="1" name="" type="number" value="1">
+                    <input style="cursor: pointer;" class="plus is-form" type="button" value="+">
+                </h5>
+                <!-- Button trigger modal -->
+                <button style='background-color: orangered;font-size:24px;margin-left: 500px;' ><i class='fas fa-cart-plus'></i>
+                  Mua hàng
+                </button>
+                
+            </p>
+        </div>    
+        
+            <div class="footer" style="color: yellow;">
+                <div class="row" >
+                    <div class="col-4" style="background-color: black;">
+                        <h1>Liên hệ với chúng tôi</h1>
+                        <h3>Hotline: </h3>
+                        <p>0123123321</p>
+                        <h3>Địa chỉ</h3>
+                        <h4>TP.Hồ Chí Minh</h4>
+                        <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+S%C3%A0i+G%C3%B2n/@10.7599171,106.6800696,17z/data=!3m1!4b1!4m5!3m4!1s0x31752f1b7c3ed289:0xa06651894598e488!8m2!3d10.7599171!4d106.6822583?hl=vi-VN" style="color: #f1f1f1;">273 ADV phường 3,quận 5,TP.Hồ Chí Minh</a> 
+                        <h4>Hà Nội</h4>
+                        <p>99 XXX,phường x,quận y,Hà Nội</p>
+                        <h4>Đà Nẵng</h4>
+                        <p>100 YYY,phường a,quận b,TP.Đà Nẵng</p>
+                    </div>
+    
+                    <div class="col-4" style="background-color: black;">
+                        <h1><i class="fa fa-facebook-official" style="font-size:36px;color: white;"></i>  FACEBOOK</h1>
+                        <img src="2911.jpg">
+                    </div>
+                    <div class="col-4" style="background-color: black;">
+                        <h1><i class="fa fa-instagram" style="font-size:36px;color: white;"></i>  INSTAGRAM</h1>
+                        <img src="2911.jpg">
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

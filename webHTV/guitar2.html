@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Guitar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="style.css" rel="stylesheet">
+  <script> 
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+      });
+    });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-branch" href="Home.html">
+          <i class='fas fa-guitar' style='font-size:42px;color:cornsilk'></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bài viết</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Giỏ hàng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                  <div id="flip"><i class='fas fa-user-tie' style='font-size:22px;color: white;'></i></div>
+                    <a href="Home.html"><div id="panel">Đăng xuất</div></a>
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+ 
+<div class="container">
+ 
+  <div class="card-columns">
+    <div class="card" style="width:350px">
+        <img class="card-img-top" src="dan-epiphone-dr-100-acoustic-guitar-rw-neck-ebony-1-250x250.jpg" alt="dan-epiphone-dr-100-acoustic-guitar-rw-neck-ebony" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Đàn guitar acoustic dr</h4>
+          <p class="card-text">3.000.000đ</p>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 13px;">
+            Xóa sản phẩm
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Xóa!!!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    Bạn muốn xóa sản phẩm này ra khỏi cửa hàng chứ ?
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Để sau</button>
+                  <button type="button" class="btn btn-primary"  data-toggle="popover" data-content="Bạn đã xóa sản phẩm">Xóa</button>
+                  
+                <script>
+                  $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover();   
+                  });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            $('#exampleModal').on('show.bs.modal', event => {
+              var button = $(event.relatedTarget);
+              var modal = $(this);
+              // Use above variables to manipulate the DOM
+              
+            });
+          </script>
+        </div>
+        
+    </div>
+    <div class="card" style="width:350px">
+        <img class="card-img-top" src="dan-guitar-acoustic-t70-1-250x250.jpg" alt="dan-guitar-acoustic-t70" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Đàn guitar acoustic t70</h4>
+          <p class="card-text">4.500.000đ</p>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 13px;">
+            Xóa sản phẩm
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Xóa!!!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    Bạn muốn xóa sản phẩm này ra khỏi cửa hàng chứ ?
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Để sau</button>
+                  <button type="button" class="btn btn-primary"  data-toggle="popover" data-content="Bạn đã xóa sản phẩm">Xóa</button>
+                  
+                <script>
+                  $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover();   
+                  });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            $('#exampleModal').on('show.bs.modal', event => {
+              var button = $(event.relatedTarget);
+              var modal = $(this);
+              // Use above variables to manipulate the DOM
+              
+            });
+          </script>
+        </div>
+    </div>
+    <div class="card" style="width:350px">
+        <img class="card-img-top" src="dan-guitar-bass-dien-yamaha-trbx174-1-250x250.jpg" alt="dan-guitar-bass-dien-yamaha-trbx174" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Đàn guitar bass yamaha trb</h4>
+          <p class="card-text">7.000.000đ</p>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 13px;">
+            Xóa sản phẩm
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Xóa!!!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    Bạn muốn xóa sản phẩm này ra khỏi cửa hàng chứ ?
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Để sau</button>
+                  <button type="button" class="btn btn-primary"  data-toggle="popover" data-content="Bạn đã xóa sản phẩm">Xóa</button>
+                  
+                <script>
+                  $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover();   
+                  });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            $('#exampleModal').on('show.bs.modal', event => {
+              var button = $(event.relatedTarget);
+              var modal = $(this);
+              // Use above variables to manipulate the DOM
+              
+            });
+          </script>
+        </div>
+    </div>
+    <div class="card" style="width:350px">
+        <img class="card-img-top" src="dan-guitar-bass-fsr-sq-affinity-j-bass-lrl-3ts-1-250x250.jpg" alt="dan-guitar-bass-fsr-sq-affinity-j-bass-lrl-3ts" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Đàn guitar bass fsr</h4>
+          <p class="card-text">5.500.000đ</p>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 13px;">
+            Xóa sản phẩm
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Xóa!!!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    Bạn muốn xóa sản phẩm này ra khỏi cửa hàng chứ ?
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Để sau</button>
+                  <button type="button" class="btn btn-primary"  data-toggle="popover" data-content="Bạn đã xóa sản phẩm">Xóa</button>
+                  
+                <script>
+                  $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover();   
+                  });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            $('#exampleModal').on('show.bs.modal', event => {
+              var button = $(event.relatedTarget);
+              var modal = $(this);
+              // Use above variables to manipulate the DOM
+              
+            });
+          </script>
+        </div>
+    </div>
+    <div class="card" style="width:350px">
+        <img class="card-img-top" src="dan-guitar-dien-fender-squier-affinity-tele-race-red-1-250x250.jpg" alt="dan-guitar-dien-fender-squier-affinity-tele-race-red" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Đàn guitar điện fender</h4>
+          <p class="card-text">44.000.000đ</p>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 13px;">
+            Xóa sản phẩm
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Xóa!!!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    Bạn muốn xóa sản phẩm này ra khỏi cửa hàng chứ ?
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Để sau</button>
+                  <button type="button" class="btn btn-primary"  data-toggle="popover" data-content="Bạn đã xóa sản phẩm">Xóa</button>
+                  
+                <script>
+                  $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover();   
+                  });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            $('#exampleModal').on('show.bs.modal', event => {
+              var button = $(event.relatedTarget);
+              var modal = $(this);
+              // Use above variables to manipulate the DOM
+              
+            });
+          </script>
+        </div>
+    </div>
+    <div class="card" style="width:350px">
+        <img class="card-img-top" src="dan-guitar-dien-sq-affinity-strat-hss-lrl-mbk-1-250x250.jpg" alt="dan-guitar-dien-sq-affinity-strat-hss-lrl-mbk" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Đàn guitar điện sq</h4>
+          <p class="card-text">9.000.000đ</p>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 13px;">
+            Xóa sản phẩm
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Xóa!!!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    Bạn muốn xóa sản phẩm này ra khỏi cửa hàng chứ ?
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Để sau</button>
+                  <button type="button" class="btn btn-primary"  data-toggle="popover" data-content="Bạn đã xóa sản phẩm">Xóa</button>
+                  
+                <script>
+                  $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover();   
+                  });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+            $('#exampleModal').on('show.bs.modal', event => {
+              var button = $(event.relatedTarget);
+              var modal = $(this);
+              // Use above variables to manipulate the DOM
+              
+            });
+          </script>
+        </div>
+    </div>
+  </div>
+
+  
+
+</div>
+
+</body>
+</html>

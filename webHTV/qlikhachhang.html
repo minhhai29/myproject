@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quản lí khách hàng</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Tính năng băng chuyền -->  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Thanh tìm kiếm -->
+
+     
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"><!--Tính năng băng chuyền -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--Tính năng băng chuyền -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> <!--Tính năng băng chuyền -->    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><!--Tính năng băng chuyền -->
+        <script> 
+            $(document).ready(function(){
+              $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+              });
+            });
+            </script>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+            form.example button {
+                float: left;
+                width: 20%;
+                padding: 10px;
+                background: #2196F3;
+                color: white;
+                font-size: 17px;
+                border: 1px solid grey;
+                border-left:none;
+                cursor: pointer;
+                }
+
+
+            form.example button:hover {
+                background: white;
+                }
+            </style>
+            </head>
+            <body>
+            
+            <h2>Quản lí khách hàng</h2>
+            
+            <table>
+              <tr>
+                <th>Họ và tên</th>
+                <th>Điểm VIP</th>
+                <th>Quản lí</th>
+              </tr>
+              <tr>
+                <td>Monkey D.Luffy</td>
+                <td>50/100(VIP1)</td>
+                <td><!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 15px; ">
+                      Xóa khách hàng
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h5 class="modal-title">Xóa!!!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        Chỉ những khách hàng không duy trì VIP hàng tháng
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        $('#exampleModal').on('show.bs.modal', event => {
+                            var button = $(event.relatedTarget);
+                            var modal = $(this);
+                            // Use above variables to manipulate the DOM
+                            
+                        });
+                    </script></td>
+              </tr>
+              
+              <tr>
+                <td>Roronoa Zoro</td>
+                <td>250/300(VIP2)</td>
+                <td><!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 15px; ">
+                      Xóa khách hàng
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h5 class="modal-title">Xóa!!!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        Chỉ những khách hàng không duy trì VIP hàng tháng
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        $('#exampleModal').on('show.bs.modal', event => {
+                            var button = $(event.relatedTarget);
+                            var modal = $(this);
+                            // Use above variables to manipulate the DOM
+                            
+                        });
+                    </script></td>
+              </tr>
+              <tr>
+                <td>Nico Robin</td>
+                <td>130/300(VIP2)</td>
+                <td><!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 15px; ">
+                      Xóa khách hàng
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h5 class="modal-title">Xóa!!!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        Chỉ những khách hàng không duy trì VIP hàng tháng
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        $('#exampleModal').on('show.bs.modal', event => {
+                            var button = $(event.relatedTarget);
+                            var modal = $(this);
+                            // Use above variables to manipulate the DOM
+                            
+                        });
+                    </script></td>
+              </tr>
+              <tr>
+                <td>Tony Tony Chopper</td>
+                <td>20/100(VIP1)</td>
+                <td><!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 15px; ">
+                      Xóa khách hàng
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h5 class="modal-title">Xóa!!!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        Chỉ những khách hàng không duy trì VIP hàng tháng
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        $('#exampleModal').on('show.bs.modal', event => {
+                            var button = $(event.relatedTarget);
+                            var modal = $(this);
+                            // Use above variables to manipulate the DOM
+                            
+                        });
+                    </script></td>
+              </tr>
+              <tr>
+                <td>Vinsmoke Sanji</td>
+                <td>320/500(VIP3)</td>
+                <td><!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 15px; ">
+                      Xóa khách hàng
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h5 class="modal-title">Xóa!!!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        Chỉ những khách hàng không duy trì VIP hàng tháng
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        $('#exampleModal').on('show.bs.modal', event => {
+                            var button = $(event.relatedTarget);
+                            var modal = $(this);
+                            // Use above variables to manipulate the DOM
+                            
+                        });
+                    </script></td>
+              </tr>
+              <tr>
+                <td>Postgas D.Ace</td>
+                <td>220/300(VIP2)</td>
+                <td><!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId" style="font-size: 15px; ">
+                      Xóa khách hàng
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h5 class="modal-title">Xóa!!!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        Chỉ những khách hàng không duy trì VIP hàng tháng
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        $('#exampleModal').on('show.bs.modal', event => {
+                            var button = $(event.relatedTarget);
+                            var modal = $(this);
+                            // Use above variables to manipulate the DOM
+                            
+                        });
+                    </script></td>
+              </tr>
+            </table>
+              
+    </body>
+</html>
